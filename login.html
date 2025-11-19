@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Farmer Shop</title>
+  <style>
+    body {
+      margin: 0; padding: 0;
+      display: flex; justify-content: center; align-items: center;
+      height: 100vh; 
+      background: #f0f5f1;
+      font-family: Arial;
+    }
+    .login-box {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 0;
+      cursor: pointer;
+      background: #2f8f4a;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-box">
+    <h2>Welcome to Farmer Shop</h2>
+    <p>Please sign in to continue</p>
+    <button id="googleSignIn">Sign in with Google</button>
+  </div>
+
+  <script type="module">
+    // Firebase config
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { getAuth, GoogleAuthProvider, signInWithPopup } 
+      from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDPLy94SiCF6697yGsLXIfteV3iAtmXzKI",
+      authDomain: "former-shop.firebaseapp.com",
+      projectId: "former-shop",
+      storageBucket: "former-shop.firebasestorage.app",
+      messagingSenderId: "977112770102",
+      appId: "1:977112770102:web:f61cf20895b0ca79e11a97",
+      measurementId: "G-Q8E0XE0QRN"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+
+    document.getElementById("googleSignIn").onclick = () => {
+      signInWithPopup(auth, provider)
+        .then(() => {
+          window.location.href = "index.html"; // redirect to your main website
+        })
+        .catch(err => alert("Login Failed: " + err.message));
+    };
+  </script>
+</body>
+</html>

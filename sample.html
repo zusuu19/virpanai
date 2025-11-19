@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="main-navigation">
+            <h1 class="brand-name">VIRPANAI</h1>
+        <nav class="nav-hangers">
+            <a href="#"  >Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#sell">To Sell</a>
+            <button class="menu">🧺Cart</button>
+        </nav>
+        </div>
+    </header>
+    <section class="intro">
+        <div class="main-intro">
+            <h2 class="one">Fresh from our fields to your table</h2>
+            <p class="one">Local vegetables, fruits, dairy — grown and harvested with care. Browse and order directly.</p>
+            <a class="show-products" href="#">Show products</a>
+        </div>
+    </section>
+    <section  class="products-section">
+        <h2 class="products">Products</h2>
+        <div id="productsGrid" class="products-grid" aria-live="polite"> </div>
+    </section>
+    <section id="about">
+        <h2>About the Farm</h2>
+         <p>We are a small family-run farm growing seasonal crops using sustainable methods. We deliver fresh picks every week.</p>
+    </section>
+    <section id="Contact">
+        <h2>Contact & Help</h2>
+        <form class="contact-form" id="contact-form">
+            <label for="Name">Name
+              <input type="text"name="Name" required>
+            </label>
+            <label for="mail">email
+              <input type="email"name="mail" required>
+            </label>
+            <label for="message"
+            >Message  <textarea name="message" rows="3"></textarea>
+            </label>
+            <button type="submit" class="submit" id="submit">Send Message</button>
+        </form>
+    </section>
+    
+    <footer class="site-footer" >
+        <div class="container">
+        <small >© <span id="year"></span> Farmer Market — Local produce. No payment processing (demo).</small>
+    </div>
+    </footer>
+</body>
+</html>

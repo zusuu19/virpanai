@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VIRPANAI — Farmer Shop</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+  <header class="main-header container">
+    <div class="main-navigation">
+      <h1 class="brand-name">VIRPANAI</h1>
+      <nav class="nav-hangers" aria-label="Main navigation">
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#Contact">Contact</a>
+        <a href="#sell">To Sell</a>
+        <button  id="cartBtn" class="menu">🧺 <span id="cartCount">0</span></button>
+       
+
+      </nav>
+    </div>
+  </header>
+<!-- HERO SLIDER (paste right after your header) -->
+<section class="hero-slider container" aria-label="Featured">
+  <div class="slides" id="heroSlides">
+    <div class="slide" data-index="0">
+      <img src="images/slide4.png" class="slide-img" alt="Slide 1">
+      <div class="slide-content">
+        <h2>Fresh vegetables — daily harvest</h2>
+        <p>Direct from the farm to your table.</p>
+        <a class="btn" href="#products"style="color: black; background-color: white; padding: 5px;border-radius: 7px;">Shop now</a>
+      </div>
+    </div>
+
+    <div class="slide" data-index="1">
+      <img src="images/slide2.png" class="slide-img" alt="Slide 2">
+      <div class="slide-content">
+        <h2>Seasonal fruits — sweetest picks</h2>
+        <p>Hand-picked and packed carefully.</p>
+        <a class="btn" href="#products" style="color: black; background-color: white; padding: 5px;border-radius: 7px;">Browse fruits</a>
+      </div>
+    </div>
+
+    <div class="slide" data-index="2">
+      <img src="images/slide3.png" class="slide-img" alt="Slide 3">
+      <div class="slide-content">
+        <h2>Fresh dairy — farm to door</h2>
+        <p>Daily milk and dairy products delivered.</p>
+        <a class="btn" href="#products"style="color: black; background-color: white; padding: 5px;border-radius: 7px;">See dairy</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- controls -->
+  <button class="slider-btn prev" id="sliderPrev" aria-label="Previous slide">‹</button>
+  <button class="slider-btn next" id="sliderNext" aria-label="Next slide">›</button>
+
+  <!-- dots -->
+  <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Slide dots"></div>
+</section>
+
+  <section class="intro container">
+    <div class="main-intro">
+      <h2 class="one">Fresh from our fields to your table</h2>
+      <p class="one">Local vegetables, fruits, dairy — grown and harvested with care. Browse and order directly.</p>
+      <a class="show-products" href="#products">Show products</a>
+    </div>
+  </section>
+<section id="products" class="products-section container">
+  <h2 class="products">Products</h2>
+
+  <!-- Filter buttons (paste here) -->
+  <div class="filter-buttons" id="filterButtons" style="margin:12px 0;display:flex;gap:8px">
+    <button data-filter="all" class="filter-btn">All</button>
+    <button data-filter="vegetables" class="filter-btn">Vegetables</button>
+    <button data-filter="fruits" class="filter-btn">Fruits</button>
+    <button data-filter="dairy" class="filter-btn">Dairy</button>
+    <button data-filter="other" class="filter-btn">Other</button>
+  </div>
+
+  <div id="productsGrid" class="products-grid" aria-live="polite"></div>
+</section>
+
+
+  
+
+  <section id="Contact" class="container contact-section">
+    <h2 style="color: green;">Contact & Help</h2>
+    <form class="contact-form" id="contact-form">
+      <label for="Name">Name
+        <input id="contact-name" type="text" name="Name" required>
+      </label>
+      <label for="mail">Email
+        <input id="contact-email" type="email" name="mail" required>
+      </label>
+      <label for="message">Message
+        <textarea id="contact-message" name="message" rows="3"></textarea>
+      </label>
+      <button type="submit" class="submit" id="submit">Send Message</button>
+    </form>
+  </section>
+
+<section id="about" class="container about">
+    <h2>About</h2>
+    <p style="width: 750px;" >At VIRPANAI, we believe that good food begins with good soil.
+Our farm is nurtured with natural methods, free from harmful chemicals and pesticides. We grow seasonal vegetables, fruits, greens, and dairy with hands-on care — just like how food should be.
+
+For years,
+ our family has followed traditional farming practices that respect nature and protect the land. Every harvest is fresh, clean, and delivered directly from our fields to your home.
+We promise quality, freshness, and honesty in every product.</p>
+  </section>
+
+  <footer class="site-footer container">
+    <small>© <span id="year"></span> VIRPANAI — Demo shop</small>
+  </footer>
+
+ <script type="module" src="firebase-cloudinary.js"></script>
+
+</body>
+</html>
+
+
